@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from tareas.views import detalle_tarea
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('tasks/<int:pk>/detail', detalle_tarea.as_view())
 ]
